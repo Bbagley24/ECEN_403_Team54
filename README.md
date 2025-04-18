@@ -2,9 +2,9 @@
 
 This Repository contains all of the digital content created throughout the duration of Team 54's project. This includes the code made for the system, PCB plans and schematics, relevant presentations and documents, ect.**
 
-- **Each subsytem has it's own folder containing files and documents associated with the respective susbystem.**
+- **Each subsytem has its own folder containing files and documents associated with the respective susbystem.**
 - **Presentations are located in the "Presentations" folder and are organized by semester.**
-- **Relevant documents are located in the "Documents and Reports" folder.**
+- **Relevant documents are located in the "Documents and Reports" folder which is also organized by semester.**
 - **All other content is stored in the "Miscellaneous" folder.**
 
 
