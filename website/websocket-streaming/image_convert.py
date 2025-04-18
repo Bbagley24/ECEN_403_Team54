@@ -14,4 +14,4 @@ img = Image.fromarray(img_array, mode="L")
 
 #save image
 img.save("output.png")
-img.show()
+#img.show()

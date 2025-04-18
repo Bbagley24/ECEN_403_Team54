@@ -12,8 +12,12 @@
     <!-- Image element -->
     <img id="video-stream" class="video-frame" src="" alt="Live Stream">
 
-    <!-- Model ID Display -->
-    <h1 id="model-id-display">MODEL ID: </h1>
+    <!-- Switch state display -->
+    <div id="switch-status">
+      Switch State: <span id="switch-state">Server is Down</span>
+    </div>
+
+    
 
     <!-- Buttons container -->
     <div class="button-container">
@@ -21,17 +25,5 @@
       <button id="back-to-map-button" class="control-button">Back to Map</button>
     </div>
   </div>
-
-  <script>
-    //function to update the image element with the latest image
-    function updateImage() {
-      const imgElement = document.getElementById('video-stream');
-      imgElement.src = `http://10.245.93.72:3000/output.png?ts=${Date.now()}`;
-    }
-
-    //Update the image every 100ms (may change later)
-    setInterval(updateImage, 100);
-  </script>
 </body>
 </html>
-

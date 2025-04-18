@@ -5,26 +5,28 @@ body, html {
   height: 100%;
 }
 
-/* Video container fills the viewport */
+/* Make the container fill the entire viewport and center its contents */
 .video-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  position: relative;      /* Needed for absolutely positioned buttons/text */
+  display: flex;          /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  flex-direction: column; /* Stack items vertically */
+  width: 100vw;           /* Fill viewport width */
+  height: 100vh;          /* Fill viewport height */
+  background-color: #fff; /* White background */
 }
 
-/* Style the image to fill the container */
+/* Style the image to appear bigger while preserving aspect ratio */
 .video-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Adjust image to cover the container */
-  z-index: 1; /* Ensure the image is behind the Model ID */
+  width: 80%;         /* Increase this value for an even bigger image */
+  height: auto;       /* Maintain aspect ratio */
+  max-height: 90%;    /* Prevent it from overflowing vertically */
+  object-fit: contain;
+  z-index: 1;
 }
 
-/* Buttons container */
+/* Buttons container (absolute positioning over the video container) */
 .button-container {
   position: absolute;
   top: 20px;
@@ -40,37 +42,46 @@ body, html {
   font-size: 16px;
   font-family: 'Lexend', sans-serif;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.8);
   border: none;
   border-radius: 4px;
 }
 
 .control-button:hover {
-  background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+  background-color: rgba(255, 255, 255, 1);
 }
 
-/* Error message */
+/* Error message (if any) */
 #empty-stream-message {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ff0000; /* Red color for emphasis */
+  color: #ff0000;
   font-weight: bold;
   text-align: center;
-  z-index: 5; /* Ensure it's above the video but below the Model ID */
+  z-index: 5;
 }
-
 
 /* Style for the Model ID Display */
 #model-id-display {
   position: absolute;
-  top: 20px; /* Adjust as needed */
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
-  color: #ffffff; /* Adjust color as needed */
+  color: #000;      /* Black text for visibility on white background */
   font-size: 24px;
   font-family: 'Lexend', sans-serif;
   text-align: center;
   z-index: 10;
 }
+
+#switch-status {
+  
+  font-size: 1.5em; /* Adjust font size */
+  font-weight: bold; /* Make it bold */
+  color: #333; /* Dark text */
+  text-align: center;
+  margin-top: 20px;
+}
+
