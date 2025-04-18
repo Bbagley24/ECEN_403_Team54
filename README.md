@@ -1,4 +1,4 @@
-# **ECEN_403_Team54**
+# **ECEN_404_Team54**
 
 This Repository contains all of the digital content created throughout the duration of Team 54's project. This includes the code made for the system, PCB plans and schematics, relevant presentations and documents, ect.**
 
