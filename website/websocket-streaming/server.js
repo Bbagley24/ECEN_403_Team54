@@ -74,6 +74,6 @@ app.get('/switchState', (req, res) => {
 app.use(express.static(__dirname));
 
 //start server
-app.listen(PORT, "10.245.161.32", () => {
-  console.log(`HTTP server is running on http://10.245.161.32:${PORT}`);
+app.listen(PORT, "192.168.1.213", () => {
+  console.log(`HTTP server is running on http://192.168.1.213:${PORT}`);
 });

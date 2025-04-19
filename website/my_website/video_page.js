@@ -7,13 +7,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   //function to update the image
   function updateImage() {
-    imgElement.src = `http://10.245.161.32:3000/output.png?ts=${Date.now()}`;
+    imgElement.src = `http://192.168.1.213:3000/output.png?ts=${Date.now()}`;
   }
 
   //function to fetch the latest switch state from the server
   function updateSwitchState() {
     //urly for switch state endpoint
-    const url = `http://10.245.161.32:3000/switchState`;
+    const url = `http://192.168.1.213:3000/switchState`;
     //perform HTTP GET
     fetch(url)
       .then(response => response.json())
